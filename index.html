@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smart Home Control</title>
+
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#28074a">
+
+</head>
+
+<body>
+    <header>
+        <h1><i class="fas fa-home"></i> AuraCore</h1>
+    </header>
+
+    <main>
+        <!-- Lighting Control Section (TOGGLE SWITCH) -->
+        <section id="lighting-control">
+            <h2><i class="fas fa-lightbulb"></i> Lighting</h2>
+            <div class="toggle-container">
+                <label class="switch">
+                    <input type="checkbox" id="lightToggle" onchange="handleLightToggle(this)">
+                    <span class="slider round"></span>
+                </label>
+                <span id="lightStatus">Off</span>
+            </div>
+        </section>
+
+
+        <!-- Temperature Control -->
+        <section id="temperature-control">
+            <h2><i class="fas fa-temperature-high"></i> Temperature</h2>
+            <div class="temperature-display" id="temperatureDisplay">78°F</div>
+            <div class="controls">
+                <button onclick="adjustTemp('increase')"><i class="fas fa-plus"></i> Increase</button>
+                <button onclick="adjustTemp('decrease')"><i class="fas fa-minus"></i> Decrease</button>
+            </div>
+        </section>
+
+        <!-- Music Control -->
+        <section id="music-control">
+            <h2><i class="fas fa-music"></i> Music</h2>
+            <div class="song-display" id="songDisplay">No song playing</div>
+            <div class="controls">
+                <button onclick="togglePlayPause()">
+                    <i class="fas fa-play"></i> Play/Pause
+                </button>
+                <button onclick="stopMusic()">
+                    <i class="fas fa-stop"></i> Stop
+                </button>
+                <button onclick="nextTrack()">
+                    <i class="fas fa-forward"></i> Next
+                </button>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
