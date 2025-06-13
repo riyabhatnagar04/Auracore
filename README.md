@@ -21,3 +21,5 @@ Data Handling: Local JSON objects to simulate device states and settings
 
 Ideal Use Case:
 AuraCore is perfect for prototyping smart home dashboards or teaching beginners how to create interactive web applications using basic frontend technologies.
+You can have a peek here:
+https://auracore.netlify.app/
